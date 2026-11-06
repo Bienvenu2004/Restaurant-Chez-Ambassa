@@ -29,5 +29,5 @@ export const hours: { day: number; label: string; services: Service[] }[] = [
 
 export function formatServices(services: Service[]) {
   if (services.length === 0) return "Fermé";
-  return services.map((s) => `${s.open.replace(":", " h ")}–${s.close.replace(":", " h ")}`.replace(/ h 00/g, " h")).join(" · ");
+  return services.map((s) => `${s.open.replace(":", " h ")} à ${s.close.replace(":", " h ")}`.replace(/ h 00/g, " h")).join(" et ");
 }

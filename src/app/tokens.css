@@ -1,0 +1,56 @@
+/* Système visuel tiré de DESIGN.md (racine du projet) : « Warm Professionalism », papier chaud, mousse et acajou, verre-papier.
+   Toute couleur, police, rayon ou espacement du site passe par ces jetons. */
+:root {
+  color-scheme: light;
+
+  /* Espacements (base 8px) */
+  --space-3xs: 2px; --space-2xs: 4px; --space-xs: 8px; --space-sm: 12px; --space-md: 16px; --space-lg: 24px; --space-xl: 40px; --space-2xl: 64px; --space-3xl: 96px; --space-4xl: 144px;
+  --card-padding: 2rem;
+
+  /* Tailles de texte */
+  --text-xs: 0.75rem; --text-sm: 0.875rem; --text-md: 1rem; --text-lg: 1.125rem; --text-xl: 1.375rem; --text-2xl: 1.75rem; --text-3xl: 2.25rem;
+  --text-display-s: clamp(2rem, 3vw + 0.75rem, 3.25rem); --text-display: clamp(2.75rem, 4.2vw + 1rem, 4rem);
+  --text-section: clamp(2rem, 2.4vw + 1rem, 3.25rem); --text-title: clamp(1.125rem, 0.5vw + 0.95rem, 1.375rem); --text-lead: clamp(1.0625rem, 0.3vw + 1rem, 1.25rem);
+  --text-label: 0.75rem;
+
+  /* Mouvement : power3.out, 0.9s, décalage de 0.045s par mot */
+  --ease-out: cubic-bezier(0.215, 0.61, 0.355, 1); --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-micro: 120ms; --dur-short: 240ms; --dur-long: 900ms; --stagger: 45ms;
+
+  /* Gabarit : conteneur max-w-7xl centré, sections très aérées */
+  --container: 1280px; --gutter: 40px; --gap-columns: 24px; --section-gap-s: 128px; --section-gap: 176px; --section-gap-l: 208px;
+  --header-h: 72px;
+  --z-base: 1; --z-raised: 10; --z-dropdown: 100; --z-sticky: 200; --z-sticky-nav: 300; --z-modal: 400;
+
+  /* Couleurs : papier, encre brun-noir, mousse, acajou */
+  --color-paper: #f5efe6; --color-paper-2: #fbf6f0; --color-paper-3: #fcf8f1; --color-paper-deep: #ece3d6;
+  --color-ink: #1f1b16; --color-ink-2: #61564a; --color-muted: #7e7365; --color-ink-hover: #2a241d;
+  --color-rule: #d7cbbb; --color-rule-2: #d8cebe; --color-field: #a89a88;
+  --color-moss: #2e3a2f; --color-moss-2: #3d4c3e; --color-mahogany: #5c3822; --color-mahogany-2: #774a2e;
+  --color-accent: #2e3a2f; --color-accent-2: #5c3822; --color-accent-ink: #f8f4ed; --color-accent-ink-2: #d7cbbb;
+  --color-focus: #3d4c3e; --color-error: #9b2c1c; --color-success: #2e5a35;
+  --color-glass: rgba(255, 255, 255, 0.48); --color-glass-strong: rgba(251, 246, 240, 0.72); --color-highlight: rgba(255, 255, 255, 0.75);
+  --color-scrim: rgba(31, 27, 22, 0.84); --color-band-border: #6e7a67;
+
+  /* Typographie : Inter partout, JetBrains Mono pour les étiquettes */
+  --font-display: var(--font-inter), "Inter", system-ui, sans-serif;
+  --font-body: var(--font-inter), "Inter", BlinkMacSystemFont, system-ui, sans-serif;
+  --font-label: var(--font-mono), "JetBrains Mono", ui-monospace, monospace;
+  --display-weight: 600; --tracking-display: -0.035em; --tracking-label: 0.18em;
+
+  /* Formes : grands arrondis, jamais d'angle droit */
+  --radius-xl: 2rem; --radius-lg: 1.75rem; --radius-md: 1rem; --radius-sm: 0.75rem; --radius-pill: 9999px;
+  --rule-hair: 1px;
+
+  /* Profondeur « verre-papier » : dégradés lumineux et filets intérieurs, pas d'ombre lourde */
+  --surface-card: linear-gradient(160deg, rgba(255, 255, 255, 0.62), rgba(251, 246, 240, 0.38));
+  --border-card: linear-gradient(160deg, rgba(255, 255, 255, 0.9), #d8cebe 55%, rgba(216, 206, 190, 0.5));
+  --inset-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.75);
+  --btn-primary: linear-gradient(180deg, #3d4c3e 0%, #2e3a2f 55%, #263027 100%);
+  --btn-primary-hover: linear-gradient(180deg, #46574a 0%, #344236 55%, #2b362c 100%);
+  --btn-accent: linear-gradient(180deg, #774a2e 0%, #5c3822 60%, #4e2f1c 100%);
+  --band-moss: linear-gradient(160deg, #36443a 0%, #2e3a2f 45%, #232c24 100%);
+  --hero-band: linear-gradient(180deg, #fcf8f1 0%, #f3ede4 100%);
+  --inset-highlight-dark: inset 0 1px 0 rgba(255, 255, 255, 0.18);
+  --page-glow: radial-gradient(120% 80% at 80% -10%, rgba(255, 255, 255, 0.7), transparent 60%), radial-gradient(90% 70% at 0% 100%, rgba(216, 206, 190, 0.45), transparent 60%);
+}
